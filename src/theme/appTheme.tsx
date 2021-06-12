@@ -1,15 +1,23 @@
 import { StyleSheet } from "react-native";
+import {Dimensions} from 'react-native'
+
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
+
 
 
 export const styles = StyleSheet.create({
     fondo: {
         flex:1,
         backgroundColor: 'black',
+        
     },
     calculadoraContainer:{
         flex:1,
         paddingHorizontal:20,
-        justifyContent: 'flex-end'
+        justifyContent: 'flex-end',
+        height: windowHeight,
+        width: windowWidth,
     }
     ,
     resultado:{
@@ -37,7 +45,7 @@ export const styles = StyleSheet.create({
         backgroundColor:'#2D2D2D',
         borderRadius:100,
         justifyContent:'center',
-        marginHorizontal:10,
+        marginHorizontal:5,
     },
     botonTexto:{
         textAlign: 'center',
